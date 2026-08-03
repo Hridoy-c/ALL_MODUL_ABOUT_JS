@@ -130,3 +130,37 @@
 // }
 
 
+
+
+// 14
+// function countValues(num) {
+//     let count = 0;
+//     for(let i = 0;i<num.length;i++){
+//         if(num[i] > 10){
+//             console.log(num[i]);
+//             count++;
+//         }
+//     }
+//     return count;
+// }
+
+// console.log(countValues([1, 12, 23, 4, 23, 63, 32, 8, 9, 10  ]));
+
+
+
+
+// 15
+// function countDown(numbar) {
+//     while(numbar > 0){
+//         console.log(numbar);
+//         numbar--;
+//     }
+//     return 'lift off';
+
+    
+// }
+
+// console.log(countDown(5));
+
+
+// 16
