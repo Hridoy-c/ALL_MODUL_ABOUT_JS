@@ -8,7 +8,7 @@ function studentIntroduction(student) {
   }
   const {name, age, course} = student
 
-  return `My name is ${name}. I am ${age} years old. I am learning ${course}`
+  return `My name is ${name}. I am ${age} years old. I am learning ${course}.`
 
 
 }

@@ -1,17 +1,17 @@
 function filterActiveUsers(users) {
-  
-  if (!Array.isArray(users) || users.length === 0 ) {
+  if (!Array.isArray(users) || users.length === 0) {
     return "Invalid";
   }
-
-  let filterUser = users.filter((item) => {
-    console.log(item.isActive);
-   
-    
-    return item.isActive === true;
-
-  });
-  return filterUser;
+  for(const user of users){
+    let keys = Object.keys(user)
+    if(!keys.includes("isActive")){
+      return "Invalid"
+    }
+  }
+  let filterUser = users.filter((item)=>{
+    return item.isActive === true
+  })
+  return filterUser
 }
 
 console.log(filterActiveUsers([{ name: "A", isActive: true },{ name: "B", isActive: false }, { name: "C", isActive: true }]));

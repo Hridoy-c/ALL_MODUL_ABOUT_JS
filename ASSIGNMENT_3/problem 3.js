@@ -1,24 +1,17 @@
 function countHashtags(caption) {
+  if(typeof caption !== "string"){
+    return "Invalid"
+  }
   let splitCaption = caption.split(" ")
-  let findHeshTag = splitCaption.filter((item)=>{
-    return item.startsWith("#")
-  })
-
-  let cunt = findHeshTag[0]
-  
-
-  let findTheLongestTag = findHeshTag.map((item)=>{
-    if(item.length > cunt.length){
-      
-      cunt = item
+  let findHeshTag = splitCaption.filter((items)=>items.startsWith("#"))
+  let countNumbar = ""
+  findHeshTag.map((items)=>{
+    let sliceItem = items.slice(1)
+    if(sliceItem.length > countNumbar.length){
+      countNumbar = sliceItem
     }
   })
-
-  
-  
-  return { hashtagCount: findHeshTag.length, longestHashtag: cunt }
-  
- 
+  return {hashtagCount: findHeshTag.length, longestTag: countNumbar}
 }
 console.log(countHashtags("Loving this weather today #sunny #vibes #weekend"))
 console.log(countHashtags("No hashtags here"))
