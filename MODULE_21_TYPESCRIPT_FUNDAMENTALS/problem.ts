@@ -184,30 +184,43 @@ console.log(Total)
 
 // 18
 
-let getTotal = (cards: cards[])=>{
-    console.log(cards)
+let getTotal = (products: products[])=>{
+    console.log(products)
 
 
 
 }
 
-// let card: cards[] = [
-//     {
-//         name:'bag',
-//         price:322 , 
-//         stock:23,  
-//     },
-//     {
-//         name:'pen',
-//         price:322 , 
-//         stock:2,  
-//     },
-//     {
-//         name:'tv',
-//         price:322 , 
-//         stock:3,  
-//     }
-// ]
+type products  ={
+    id: number,
+    name: string,
+    price: number,
+    stock: number
+}
 
-// let TotalNum: number = getCalculateTotalPrice(cards)
+
+let products: products[] =[ {
+    id: 1,
+    name: 'bag',
+    price: 322,
+    stock: 23,
+},
+{
+    id: 2,
+    name: 'pen',
+    price: 322,
+    stock: 2,
+},
+{
+    id: 3,
+    name: 'tv',
+    price: 322,
+    stock: 3,
+}
+
+]
+
+let TotalNum = getCalculateTotalPrice(products[])
 // console.log(Total)
+
+
