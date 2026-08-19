@@ -184,14 +184,14 @@ console.log(Total)
 
 // 18
 
-let getTotal = (products: products[])=>{
-    console.log(products)
+let getTotal = (products: product[])=>{
+    console.log('heheh',products)
 
 
 
 }
 
-type products  ={
+type product  ={
     id: number,
     name: string,
     price: number,
@@ -199,7 +199,7 @@ type products  ={
 }
 
 
-let products: products[] =[ {
+let productItem: product[] =[ {
     id: 1,
     name: 'bag',
     price: 322,
@@ -220,7 +220,6 @@ let products: products[] =[ {
 
 ]
 
-let TotalNum = getCalculateTotalPrice(products[])
-// console.log(Total)
+let TotalNum = getTotal(productItem)
 
 

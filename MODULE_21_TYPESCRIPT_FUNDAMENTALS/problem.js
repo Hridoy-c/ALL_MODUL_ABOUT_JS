@@ -122,9 +122,9 @@ let Total = getCalculateTotalPrice(cards);
 console.log(Total);
 // 18
 let getTotal = (products) => {
-    console.log(products);
+    console.log('heheh', products);
 };
-let products = [{
+let productItem = [{
         id: 1,
         name: 'bag',
         price: 322,
@@ -143,5 +143,5 @@ let products = [{
         stock: 3,
     }
 ];
-let TotalNum = getCalculateTotalPrice(products[]);
-// console.log(Total)
+let TotalNum = getTotal(productItem);
+console.log(Total);
