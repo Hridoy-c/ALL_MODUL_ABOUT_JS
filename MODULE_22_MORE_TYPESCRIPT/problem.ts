@@ -46,9 +46,9 @@ let getProductPrice = (product: Product):void=>{
 
 }
 
-let price = getProductPrice({ title: "Mouse", price: 500, inStock: true });
-let price2 = getProductPrice({ title: "Laptop", price: 55000 });
-// console.log(price, price2);
+// let price = getProductPrice({ title: "Mouse", price: 500, inStock: true });
+// let price2 = getProductPrice({ title: "Laptop", price: 55000 });
+// // console.log(price, price2);
 
 
 
@@ -95,3 +95,84 @@ let item2:Products<number>={
 }
 
 // console.log(item1, item2);
+
+
+
+// 7
+interface User{
+    id: number;
+    name: string;
+    
+}
+
+
+let getFindById = <T extends User>( items: T[], id: number)=>{
+
+    return items.find(item => item.id === id);
+
+}
+
+const users = [
+  { id: 1, name: "Rahim" },
+  { id: 2, name: "Karim" },
+  { id: 3, name: "Hasan" }
+];
+
+let product = getFindById(users, 2);
+// console.log(product);
+
+
+
+
+// 8
+
+enum OrderStatues{
+    Placed= "Placed",
+    Shipped="Shipped",
+    Delivered="Delivered"
+}
+
+let getOrderStatues = (order:OrderStatues)=>{
+    return `Order Status: ${order.toUpperCase()}`
+
+}
+let orderStat = getOrderStatues(OrderStatues.Placed);
+// console.log(orderStat);
+
+
+
+// 9
+interface Employee {
+    name: string;
+    id: number;
+    department: string;
+    salary: number;
+}
+
+let getUpdateEmployee =(user: Partial<Employee>)=>{
+
+    // console.log(user);
+
+}
+
+let result = getUpdateEmployee({ name: "Rafi", id: 1 });
+// console.log(result);
+
+type EmployeeNameId = Pick<Employee, "name" | "id">;
+type EmployeeSalary = Omit<Employee, "salary">;
+
+let userss: EmployeeNameId = {
+    id: 1,
+    name: "Rafi",
+    
+
+}
+
+let userss2: EmployeeSalary = {
+    id: 1,
+    name: "Rafi",
+    department: "IT",
+
+}
+
+console.log(userss);
